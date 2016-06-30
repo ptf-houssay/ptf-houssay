@@ -1,8 +1,75 @@
 <!DOCTYPE html>
-
 <html>
-  <head>
-    <title>PTF Sede Houssay</title>
-  </head>
-  <body>hello world!</body>
+    <head>
+        <meta charset="utf-8">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link href="https://necolas.github.io/normalize.css/4.1.1/normalize.css" rel="stylesheet" type="text/css">
+        <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+        <style>
+            nav {
+                background-color: #56569a;
+                height: 40px;
+                color: white;
+            }
+            
+            h3 {
+                display: inline-block;
+                float: left;
+                margin-left: 20px;
+                margin-top: 10px;
+            }
+            
+            a i {
+                color: white;
+                float: right;
+                font-size: 20px;
+                margin-right: 20px;
+                margin-top: 8px;
+            }
+            
+            .menu {
+                display: none;
+                height: 200px;
+                width: 200px;
+                background-color: #56569a;
+            }
+            
+            ul {
+                list-style: none;
+                color: white;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <nav>
+            <h3>Menú</h3>
+            <a href="#"><i class="ion-navicon-round"></i></a>
+        </nav>
+        
+        <div class="menu">
+            <ul>
+                <li>Uno</li>
+                <li>Dos</li>
+                <li>Tres</li>
+                <li>Cuatro</li>
+                <li>Cinco</li>
+            </ul>
+        </div>
+    </body>
+    <script>
+        var visible = false;
+        $('a').click(function() {
+            if(visible==false) {
+                $('.menu').css('display','block')
+                visible = true;
+            } else if(visible) {
+                $('.menu').css('display','none')
+                visible = false;
+            }
+            
+            return false;
+        });
+
+    </script>
 </html>
